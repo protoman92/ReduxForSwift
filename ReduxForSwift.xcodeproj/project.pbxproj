@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE721B4378E005D0F1B /* AppDelegate.swift */; };
-		D3322EEA21B4378E005D0F1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE921B4378E005D0F1B /* ViewController.swift */; };
+		D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE921B4378E005D0F1B /* ViewController1.swift */; };
 		D3322EED21B4378E005D0F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EEB21B4378E005D0F1B /* Main.storyboard */; };
 		D3322EEF21B43793005D0F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3322EEE21B43793005D0F1B /* Assets.xcassets */; };
 		D3322EF221B43793005D0F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EF021B43793005D0F1B /* LaunchScreen.storyboard */; };
+		FD428F158DC3041E3A9FF737 /* Pods_ReduxForSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxForSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A8A5AC4E6F43B2CBFE3FCCE /* Pods-ReduxForSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxForSwift.release.xcconfig"; path = "Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift.release.xcconfig"; sourceTree = "<group>"; };
+		8ACB542A6FA4474566D2063F /* Pods-ReduxForSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxForSwift.debug.xcconfig"; path = "Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		D3322EE421B4378E005D0F1B /* ReduxForSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxForSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3322EE721B4378E005D0F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3322EE921B4378E005D0F1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3322EE921B4378E005D0F1B /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		D3322EEC21B4378E005D0F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3322EEE21B43793005D0F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3322EF121B43793005D0F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD428F158DC3041E3A9FF737 /* Pods_ReduxForSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C67C655AC02EFDADEF0A45B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75592EC75A1FB04034A41230 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8ACB542A6FA4474566D2063F /* Pods-ReduxForSwift.debug.xcconfig */,
+				2A8A5AC4E6F43B2CBFE3FCCE /* Pods-ReduxForSwift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D3322EDB21B4378E005D0F1B = {
 			isa = PBXGroup;
 			children = (
 				D3322EE621B4378E005D0F1B /* ReduxForSwift */,
 				D3322EE521B4378E005D0F1B /* Products */,
+				75592EC75A1FB04034A41230 /* Pods */,
+				1C67C655AC02EFDADEF0A45B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +79,12 @@
 		D3322EE621B4378E005D0F1B /* ReduxForSwift */ = {
 			isa = PBXGroup;
 			children = (
+				D3322EF321B43793005D0F1B /* Info.plist */,
 				D3322EE721B4378E005D0F1B /* AppDelegate.swift */,
-				D3322EE921B4378E005D0F1B /* ViewController.swift */,
-				D3322EEB21B4378E005D0F1B /* Main.storyboard */,
+				D3322EE921B4378E005D0F1B /* ViewController1.swift */,
 				D3322EEE21B43793005D0F1B /* Assets.xcassets */,
 				D3322EF021B43793005D0F1B /* LaunchScreen.storyboard */,
-				D3322EF321B43793005D0F1B /* Info.plist */,
+				D3322EEB21B4378E005D0F1B /* Main.storyboard */,
 			);
 			path = ReduxForSwift;
 			sourceTree = "<group>";
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3322EF621B43793005D0F1B /* Build configuration list for PBXNativeTarget "ReduxForSwift" */;
 			buildPhases = (
+				CF8293819ECDAB770CDE068E /* [CP] Check Pods Manifest.lock */,
 				D3322EE021B4378E005D0F1B /* Sources */,
 				D3322EE121B4378E005D0F1B /* Frameworks */,
 				D3322EE221B4378E005D0F1B /* Resources */,
@@ -130,12 +156,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CF8293819ECDAB770CDE068E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReduxForSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3322EE021B4378E005D0F1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3322EEA21B4378E005D0F1B /* ViewController.swift in Sources */,
+				D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */,
 				D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +331,7 @@
 		};
 		D3322EF721B43793005D0F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ACB542A6FA4474566D2063F /* Pods-ReduxForSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +350,7 @@
 		};
 		D3322EF821B43793005D0F1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8A5AC4E6F43B2CBFE3FCCE /* Pods-ReduxForSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
