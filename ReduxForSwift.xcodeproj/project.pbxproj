@@ -12,6 +12,7 @@
 		D3322EED21B4378E005D0F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EEB21B4378E005D0F1B /* Main.storyboard */; };
 		D3322EEF21B43793005D0F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3322EEE21B43793005D0F1B /* Assets.xcassets */; };
 		D3322EF221B43793005D0F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EF021B43793005D0F1B /* LaunchScreen.storyboard */; };
+		D3322EFA21B43886005D0F1B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EF921B43886005D0F1B /* Redux.swift */; };
 		FD428F158DC3041E3A9FF737 /* Pods_ReduxForSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		D3322EEE21B43793005D0F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3322EF121B43793005D0F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3322EF321B43793005D0F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3322EF921B43886005D0F1B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 				8ACB542A6FA4474566D2063F /* Pods-ReduxForSwift.debug.xcconfig */,
 				2A8A5AC4E6F43B2CBFE3FCCE /* Pods-ReduxForSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 			children = (
 				D3322EF321B43793005D0F1B /* Info.plist */,
 				D3322EE721B4378E005D0F1B /* AppDelegate.swift */,
+				D3322EF921B43886005D0F1B /* Redux.swift */,
 				D3322EE921B4378E005D0F1B /* ViewController1.swift */,
 				D3322EEE21B43793005D0F1B /* Assets.xcassets */,
 				D3322EF021B43793005D0F1B /* LaunchScreen.storyboard */,
@@ -188,6 +190,7 @@
 			files = (
 				D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */,
 				D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */,
+				D3322EFA21B43886005D0F1B /* Redux.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
