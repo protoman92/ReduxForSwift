@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D330B23221B92F890077B4D2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330B23121B92F890077B4D2 /* NavigationController.swift */; };
 		D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE721B4378E005D0F1B /* AppDelegate.swift */; };
 		D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE921B4378E005D0F1B /* ViewController1.swift */; };
 		D3322EED21B4378E005D0F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EEB21B4378E005D0F1B /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxForSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8A5AC4E6F43B2CBFE3FCCE /* Pods-ReduxForSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxForSwift.release.xcconfig"; path = "Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift.release.xcconfig"; sourceTree = "<group>"; };
 		8ACB542A6FA4474566D2063F /* Pods-ReduxForSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxForSwift.debug.xcconfig"; path = "Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D330B23121B92F890077B4D2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D3322EE421B4378E005D0F1B /* ReduxForSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxForSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3322EE721B4378E005D0F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3322EE921B4378E005D0F1B /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				D3322EF321B43793005D0F1B /* Info.plist */,
 				D3322EE721B4378E005D0F1B /* AppDelegate.swift */,
 				D3322EFB21B43B6C005D0F1B /* Dependency.swift */,
+				D330B23121B92F890077B4D2 /* NavigationController.swift */,
 				D3322EF921B43886005D0F1B /* Redux.swift */,
 				D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */,
 				D3322EE921B4378E005D0F1B /* ViewController1.swift */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */,
+				D330B23221B92F890077B4D2 /* NavigationController.swift in Sources */,
 				D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */,
 				D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */,
 				D3322EFC21B43B6C005D0F1B /* Dependency.swift in Sources */,
