@@ -12,22 +12,47 @@ import UIKit
 class ViewController1: UIViewController {
   @IBOutlet private weak var counterLabel: UILabel!
   
-  private var subscription: Redux.Store.Subscription?
+  /// Required by prop injector.
+  var staticProps: StaticProps?
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    
-    self.subscription = Dependency.shared.store.subscribeState("VC1", {
-      self.counterLabel.text = String(describing: $0.counter)
-    })
+  /// Required by prop injector.
+  var variableProps: VariableProps? {
+    didSet {
+      self.variableProps.map(self.didSetProps)
+    }
   }
   
-  override func viewDidDisappear(_ animated: Bool) {
-    super.viewDidDisappear(animated)
-    self.subscription?.unsubscribe()
+  func didSetProps(_ props: VariableProps) {
+    self.counterLabel.text = String(describing: props.nextState.counter)
   }
   
   @IBAction func incrementCounter(_ sender: UIButton) {
-    Dependency.shared.store.dispatch(ReduxAction.incrementCounter)
+    self.variableProps?.action.incrementCounter()
+  }
+}
+
+extension ViewController1: ReduxCompatibleViewType {
+  typealias PropInjector = Dependency.PropInjector
+  typealias OutProps = ()
+  
+  struct StateProps: Equatable {
+    let counter: Int
+  }
+  
+  struct ActionProps {
+    let incrementCounter: () -> Void
+  }
+}
+
+extension ViewController1: ReduxPropMapperType {
+  typealias ReduxState = AppState
+  
+  static func mapState(state: AppState, outProps: OutProps) -> StateProps {
+    return StateProps(counter: state.counter)
+  }
+  
+  static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
+                        outProps: OutProps) -> ActionProps {
+    return ActionProps(incrementCounter: {dispatch(AppAction.incrementCounter)})
   }
 }

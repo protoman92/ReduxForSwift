@@ -9,8 +9,8 @@
 import ReactiveRedux
 
 final class Dependency {
-  typealias PropInjector = Redux.UI.PropInjector<ReduxState>
-  typealias Store = SimpleReduxStore<ReduxState>
+  typealias PropInjector = Redux.UI.PropInjector<AppState>
+  typealias Store = SimpleReduxStore<AppState>
   private static var _instance: Dependency?
   
   static var shared: Dependency {
@@ -27,7 +27,7 @@ final class Dependency {
   let store: Store
   
   init() {
-    self.store = Store(initialState: ReduxState(), reducer: ReduxReducer.reduce)
+    self.store = Store(initialState: AppState(), reducer: AppReducer.reduce)
     self.propInjector = PropInjector(store: self.store)
   }
 }

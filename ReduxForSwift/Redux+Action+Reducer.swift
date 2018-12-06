@@ -8,28 +8,28 @@
 
 import ReactiveRedux
 
-public struct ReduxState {
+public struct AppState {
   public let counter: Int
   
   public init(counter: Int = 0) {
     self.counter = counter
   }
   
-  public func increment() -> ReduxState {
-    return ReduxState(counter: self.counter + 1)
+  public func increment() -> AppState {
+    return AppState(counter: self.counter + 1)
   }
 }
 
-public enum ReduxAction: ReduxActionType {
+public enum AppAction: ReduxActionType {
   case incrementCounter
 }
 
-public final class ReduxReducer {
-  public typealias State = ReduxState
+public final class AppReducer {
+  public typealias State = AppState
   
   public static func reduce(_ state: State, _ action: ReduxActionType) -> State {
     switch action {
-    case let action as ReduxAction:
+    case let action as AppAction:
       switch action {
       case .incrementCounter: return state.increment()
       }
