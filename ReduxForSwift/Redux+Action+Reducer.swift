@@ -6,6 +6,8 @@
 //  Copyright © 2018 swiften. All rights reserved.
 //
 
+import ReactiveRedux
+
 public struct ReduxState {
   public let counter: Int
   

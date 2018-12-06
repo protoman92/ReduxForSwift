@@ -6,26 +6,7 @@
 //  Copyright © 2018 swiften. All rights reserved.
 //
 
-public protocol ReduxActionType {}
-
-public struct Subscription {
-  public let unsubscribe: () -> Void
-  
-  public init(_ unsubscribe: @escaping () -> Void) {
-    self.unsubscribe = unsubscribe
-  }
-}
-
-public protocol ReduxStoreType {
-  associatedtype State
-  
-  func lastState() -> State
-  
-  func dispatch(_ action: ReduxActionType)
-  
-  func subscribeState(_ subscriberId: String,
-                      _ callback: @escaping (State) -> Void) -> Subscription
-}
+import ReactiveRedux
 
 public final class SimpleReduxStore<State>: ReduxStoreType {
   private var state: State
@@ -39,22 +20,27 @@ public final class SimpleReduxStore<State>: ReduxStoreType {
     self.subscribers = [:]
   }
   
-  public func lastState() -> State {
-    return self.state
+  public var lastState: Redux.Store.LastState<State> {
+    return {self.state}
   }
   
   /// Deliver the action to the internal reducer to produce a new state.
-  public func dispatch(_ action: ReduxActionType) {
-    self.state = self.reducer(self.state, action)
+  public var dispatch: Redux.Store.Dispatch {
+    return {action in
+      self.state = self.reducer(self.state, action)
     
-    /// Broadcast the new state to all subscribers.
-    self.subscribers.forEach({$1(self.state)})
+      /// Broadcast the new state to all subscribers.
+      self.subscribers.forEach({$1(self.state)})
+    }
   }
   
   /// Create a subscription for some subscriber.
-  public func subscribeState(_ subscriberId: String,
-                             _ callback: @escaping (State) -> Void) -> Subscription {
-    self.subscribers[subscriberId] = callback
-    return Subscription({self.subscribers.removeValue(forKey: subscriberId)})
+  public var subscribeState: Redux.Store.Subscribe<State> {
+    return {(subscriberId, callback) in
+      self.subscribers[subscriberId] = callback
+
+      return Redux.Store
+        .Subscription({self.subscribers.removeValue(forKey: subscriberId)})
+    }
   }
 }

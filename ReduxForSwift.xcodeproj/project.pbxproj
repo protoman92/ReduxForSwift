@@ -108,6 +108,7 @@
 				D3322EE021B4378E005D0F1B /* Sources */,
 				D3322EE121B4378E005D0F1B /* Frameworks */,
 				D3322EE221B4378E005D0F1B /* Resources */,
+				A8BF6E733A454B1648EAB8ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +166,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A8BF6E733A454B1648EAB8ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveRedux/ReactiveRedux.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftFP/SwiftFP.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveRedux.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftFP.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CF8293819ECDAB770CDE068E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

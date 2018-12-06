@@ -6,5 +6,8 @@ target 'ReduxForSwift' do
   use_frameworks!
 
   # Pods for ReduxForSwift
+  pod 'ReactiveRedux',
+    git: 'https://github.com/protoman92/ReactiveRedux-Swift.git',
+    subspecs: ['Main', 'UI']
 
 end

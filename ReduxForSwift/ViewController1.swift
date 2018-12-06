@@ -6,12 +6,13 @@
 //  Copyright © 2018 swiften. All rights reserved.
 //
 
+import ReactiveRedux
 import UIKit
 
 class ViewController1: UIViewController {
   @IBOutlet private weak var counterLabel: UILabel!
   
-  private var subscription: Subscription?
+  private var subscription: Redux.Store.Subscription?
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
