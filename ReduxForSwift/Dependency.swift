@@ -6,10 +6,14 @@
 //  Copyright © 2018 swiften. All rights reserved.
 //
 
-public final class Dependency {
+import ReactiveRedux
+
+final class Dependency {
+  typealias PropInjector = Redux.UI.PropInjector<ReduxState>
+  typealias Store = SimpleReduxStore<ReduxState>
   private static var _instance: Dependency?
   
-  public static var shared: Dependency {
+  static var shared: Dependency {
     if let instance = self._instance {
       return instance
     } else {
@@ -19,10 +23,11 @@ public final class Dependency {
     }
   }
   
-  public let store: SimpleReduxStore<ReduxState>
+  let propInjector: PropInjector
+  let store: Store
   
-  public init() {
-    self.store = SimpleReduxStore(initialState: ReduxState(),
-                                  reducer: ReduxReducer.reduce)
+  init() {
+    self.store = Store(initialState: ReduxState(), reducer: ReduxReducer.reduce)
+    self.propInjector = PropInjector(store: self.store)
   }
 }
