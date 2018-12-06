@@ -32,7 +32,7 @@ class ViewController1: UIViewController {
 }
 
 extension ViewController1: ReduxCompatibleViewType {
-  typealias PropInjector = Dependency.PropInjector
+  typealias ReduxState = Dependency.State
   typealias OutProps = ()
   
   struct StateProps: Equatable {
@@ -45,8 +45,6 @@ extension ViewController1: ReduxCompatibleViewType {
 }
 
 extension ViewController1: ReduxPropMapperType {
-  typealias ReduxState = AppState
-  
   static func mapState(state: AppState, outProps: OutProps) -> StateProps {
     return StateProps(counter: state.counter)
   }
