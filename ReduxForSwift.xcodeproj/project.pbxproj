@@ -16,6 +16,7 @@
 		D3322EFA21B43886005D0F1B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EF921B43886005D0F1B /* Redux.swift */; };
 		D3322EFC21B43B6C005D0F1B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EFB21B43B6C005D0F1B /* Dependency.swift */; };
 		D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */; };
+		D3D112B421B9E70400E36C66 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D112B321B9E70400E36C66 /* TableCell.swift */; };
 		FD428F158DC3041E3A9FF737 /* Pods_ReduxForSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		D3322EF921B43886005D0F1B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D3322EFB21B43B6C005D0F1B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Redux+Action+Reducer.swift"; sourceTree = "<group>"; };
+		D3D112B321B9E70400E36C66 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				D330B23121B92F890077B4D2 /* NavigationController.swift */,
 				D3322EF921B43886005D0F1B /* Redux.swift */,
 				D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */,
+				D3D112B321B9E70400E36C66 /* TableCell.swift */,
 				D3322EE921B4378E005D0F1B /* ViewController1.swift */,
 				D3322EEE21B43793005D0F1B /* Assets.xcassets */,
 				D3322EF021B43793005D0F1B /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 				D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */,
 				D330B23221B92F890077B4D2 /* NavigationController.swift in Sources */,
 				D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */,
+				D3D112B421B9E70400E36C66 /* TableCell.swift in Sources */,
 				D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */,
 				D3322EFC21B43B6C005D0F1B /* Dependency.swift in Sources */,
 				D3322EFA21B43886005D0F1B /* Redux.swift in Sources */,
