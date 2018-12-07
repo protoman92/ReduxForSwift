@@ -54,12 +54,54 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-23-VOq">
+                                <rect key="frame" x="16" y="132" width="343" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" id="wdI-Tf-HAy" customClass="TableCell" customModule="ReduxForSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wdI-Tf-HAy" id="MbR-bq-7sW">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Table view value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odV-1u-aSA">
+                                                    <rect key="frame" x="0.0" y="4" width="343" height="36"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="updateTextValue:" destination="wdI-Tf-HAy" eventType="editingChanged" id="3L5-G4-JXP"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="odV-1u-aSA" secondAttribute="bottom" constant="4" id="0X5-eJ-ygE"/>
+                                                <constraint firstAttribute="trailing" secondItem="odV-1u-aSA" secondAttribute="trailing" id="GWE-WO-0on"/>
+                                                <constraint firstItem="odV-1u-aSA" firstAttribute="top" secondItem="MbR-bq-7sW" secondAttribute="top" constant="4" id="S9F-sL-lS2"/>
+                                                <constraint firstItem="odV-1u-aSA" firstAttribute="leading" secondItem="MbR-bq-7sW" secondAttribute="leading" id="a7l-TR-UlY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="odV-1u-aSA" id="MaP-jR-dSD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qdB-ju-YK9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9Lu-Vm-5ZI"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zpH-23-VOq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="0Ie-Vp-PNp"/>
                             <constraint firstItem="Hep-2R-VpU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="91K-0q-NKM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zpH-23-VOq" secondAttribute="bottom" constant="16" id="BL4-vL-eDu"/>
                             <constraint firstItem="yR5-8j-dXV" firstAttribute="leading" secondItem="Hep-2R-VpU" secondAttribute="trailing" constant="8" id="RcV-Lw-frg"/>
+                            <constraint firstAttribute="trailing" secondItem="zpH-23-VOq" secondAttribute="trailing" constant="16" id="Rk1-iw-0PX"/>
                             <constraint firstItem="Hep-2R-VpU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Uti-x7-CfH"/>
+                            <constraint firstItem="zpH-23-VOq" firstAttribute="top" secondItem="yR5-8j-dXV" secondAttribute="bottom" constant="12" id="Yf7-oM-Jpg"/>
                             <constraint firstItem="yR5-8j-dXV" firstAttribute="top" secondItem="Hep-2R-VpU" secondAttribute="top" id="Zj5-0X-ezf"/>
                             <constraint firstAttribute="trailing" secondItem="yR5-8j-dXV" secondAttribute="trailing" constant="16" id="f0k-87-EaZ"/>
                             <constraint firstItem="yR5-8j-dXV" firstAttribute="bottom" secondItem="Hep-2R-VpU" secondAttribute="bottom" id="ic7-yS-z4D"/>
@@ -69,6 +111,7 @@
                     <navigationItem key="navigationItem" id="eUF-nV-u7d"/>
                     <connections>
                         <outlet property="counterLabel" destination="Hep-2R-VpU" id="SMI-TV-fFe"/>
+                        <outlet property="tableView" destination="zpH-23-VOq" id="trw-29-YPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
