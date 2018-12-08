@@ -10,24 +10,18 @@ import ReactiveRedux
 
 final class Dependency {
   typealias State = AppState
-  typealias Store = SimpleReduxStore<State>
-  private static var _instance: Dependency?
-  
-  static var shared: Dependency {
-    if let instance = self._instance {
-      return instance
-    } else {
-      let instance = Dependency()
-      self._instance = instance
-      return instance
-    }
-  }
+  typealias Store = Redux.Store.DelegateStore<State>
   
   let propInjector: Redux.UI.PropInjector<State>
   let store: Store
   
-  init() {
-    self.store = Store(initialState: AppState(), reducer: AppReducer.reduce)
+  init(_ topController: UINavigationController) {
+    let router = AppRouter(topController)
+    
+    self.store = Redux.Middleware.applyMiddlewares([
+      Redux.Middleware.Router.Provider(router: router).middleware
+      ])(SimpleReduxStore(initialState: AppState(), reducer: AppReducer.reduce))
+
     self.propInjector = Redux.UI.PropInjector(store: self.store)
   }
 }

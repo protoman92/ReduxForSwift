@@ -9,6 +9,8 @@
 import UIKit
 
 final class NavigationController: UINavigationController {
+  var dependency: Dependency?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.delegate = self
@@ -21,8 +23,10 @@ extension NavigationController: UINavigationControllerDelegate {
                             animated: Bool) {
     switch viewController {
     case let vc as ViewController1:
-      _ = Dependency.shared.propInjector
-        .injectProps(controller: vc, outProps: ())
+      self.dependency?.propInjector.injectProps(controller: vc, outProps: ())
+      
+    case let vc as ViewController2:
+      self.dependency?.propInjector.injectProps(controller: vc, outProps: ())
       
     default:
       fatalError()
