@@ -28,6 +28,12 @@ class ViewController1: UIViewController {
     self.counterLabel.layer.cornerRadius = 4
     self.counterLabel.layer.borderWidth = 1
     self.counterLabel.layer.borderColor = UIColor.gray.cgColor
+    
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "View controller 2",
+      style: .plain,
+      target: self,
+      action: #selector(self.goToViewController2))
   }
   
   func didSetProps(_ props: VariableProps) {
@@ -37,6 +43,10 @@ class ViewController1: UIViewController {
   
   @IBAction func incrementCounter(_ sender: UIButton) {
     self.variableProps?.action.incrementCounter()
+  }
+  
+  @objc func goToViewController2(_ sender: UIBarButtonItem) {
+    self.variableProps?.action.goToViewController2()
   }
 }
 
@@ -75,6 +85,7 @@ extension ViewController1: ReduxCompatibleViewType {
   
   struct ActionProps {
     let incrementCounter: () -> Void
+    let goToViewController2: () -> Void
   }
 }
 
@@ -86,6 +97,9 @@ extension ViewController1: ReduxPropMapperType {
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
                         outProps: OutProps) -> ActionProps {
-    return ActionProps(incrementCounter: {dispatch(AppAction.incrementCounter)})
+    return ActionProps(
+      incrementCounter: {dispatch(AppAction.incrementCounter)},
+      goToViewController2: {dispatch(AppScreen.viewController2)}
+    )
   }
 }
