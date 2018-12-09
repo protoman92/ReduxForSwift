@@ -125,9 +125,31 @@
                     <view key="view" contentMode="scaleToFill" id="2s0-eJ-pUl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search iTunes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pag-1f-otr">
+                                <rect key="frame" x="16" y="36" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jep-YD-KQe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="updateAutocompleteInput:" destination="dYW-23-Aqh" eventType="editingChanged" id="yCT-71-R90"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pag-1f-otr" firstAttribute="top" secondItem="YLi-Sr-vM8" secondAttribute="top" constant="16" id="RSw-iD-JUM"/>
+                            <constraint firstAttribute="trailing" secondItem="Pag-1f-otr" secondAttribute="trailing" constant="16" id="kpc-c3-Y5p"/>
+                            <constraint firstItem="Pag-1f-otr" firstAttribute="leading" secondItem="2s0-eJ-pUl" secondAttribute="leading" constant="16" id="mfJ-PW-BMI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YLi-Sr-vM8"/>
                     </view>
+                    <connections>
+                        <outlet property="autocompleteInput" destination="Pag-1f-otr" id="7iv-dd-0cb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Klx-QG-qkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
