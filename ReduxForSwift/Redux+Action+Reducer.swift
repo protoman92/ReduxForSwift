@@ -9,28 +9,37 @@
 import ReactiveRedux
 
 struct AppState {
-  let counter: Int
-  var valueList: [String?]
+  var autocompleteInput: String?
+  var counter: Int
+  var textValueList: [String?]
   
-  init(counter: Int = 0, valueList: [String?] = ["", "", ""]) {
-    self.counter = counter
-    self.valueList = valueList
+  init() {
+    self.counter = 0
+    self.textValueList = []
   }
   
   func increment() -> AppState {
-    return AppState(counter: self.counter + 1)
+    var clone = self
+    clone.counter += 1
+    return clone
   }
   
   func updateTextValue(_ index: Int, _ value: String?) -> AppState {
     var clone = self
-    let length = self.valueList.count
+    let length = self.textValueList.count
     
     if index >= 0 && index < length {
-      clone.valueList[index] = value
+      clone.textValueList[index] = value
     } else if index >= length {
-      clone.valueList.append(value)
+      clone.textValueList.append(value)
     }
     
+    return clone
+  }
+  
+  func updateAutocompleteInput(_ input: String?) -> AppState {
+    var clone = self
+    clone.autocompleteInput = input
     return clone
   }
 }
@@ -38,6 +47,7 @@ struct AppState {
 enum AppAction: ReduxActionType {
   case incrementCounter
   case updateTextValue(Int, String?)
+  case updateAutocompleteInput(String?)
 }
 
 final class AppReducer {
@@ -52,6 +62,9 @@ final class AppReducer {
 
       case .updateTextValue(let index, let value):
         return state.updateTextValue(index, value)
+        
+      case .updateAutocompleteInput(let input):
+        return state.updateAutocompleteInput(input)
       }
       
     default: return state

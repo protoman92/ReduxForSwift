@@ -92,7 +92,7 @@ extension ViewController1: ReduxCompatibleViewType {
 extension ViewController1: ReduxPropMapperType {
   static func mapState(state: AppState, outProps: OutProps) -> StateProps {
     return StateProps(counter: state.counter,
-                      valueCount: state.valueList.count)
+                      valueCount: state.textValueList.count)
   }
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,

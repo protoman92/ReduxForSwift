@@ -44,7 +44,7 @@ extension TableCell: ReduxCompatibleViewType {
 
 extension TableCell: ReduxPropMapperType {
   static func mapState(state: ReduxState, outProps: OutProps) -> StateProps {
-    return StateProps(textValue: state.valueList[outProps])
+    return StateProps(textValue: state.textValueList[outProps])
   }
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
