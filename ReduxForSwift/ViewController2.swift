@@ -11,6 +11,7 @@ import UIKit
 
 final class ViewController2: UIViewController {
   @IBOutlet private weak var autocompleteInput: UITextField!
+  @IBOutlet private weak var resultTable: UITableView!
   
   var staticProps: StaticProps?
   
@@ -20,10 +21,35 @@ final class ViewController2: UIViewController {
   
   func didSetProps(_ props: VariableProps) {
     self.autocompleteInput.text = props.nextState.autocompleteInput
+    self.resultTable.reloadData()
   }
   
   @IBAction func updateAutocompleteInput(_ sender: UITextField) {
     self.variableProps?.action.updateAutocompleteInput(sender.text)
+  }
+}
+
+extension ViewController2: UITableViewDataSource {
+  func tableView(_ tableView: UITableView,
+                 numberOfRowsInSection section: Int) -> Int {
+    return self.variableProps?.nextState.resultCount ?? 0
+  }
+  
+  func tableView(_ tableView: UITableView,
+                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView
+      .dequeueReusableCell(withIdentifier: "iTunesTrackCell")
+      as! iTunesTrackCell
+    
+    self.staticProps?.injector.injectProps(view: cell, outProps: indexPath.row)
+    return cell
+  }
+}
+
+extension ViewController2: UITableViewDelegate {
+  func tableView(_ tableView: UITableView,
+                 heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 56
   }
 }
 
@@ -33,6 +59,7 @@ extension ViewController2: ReduxCompatibleViewType {
   
   struct StateProps: Equatable {
     let autocompleteInput: String?
+    let resultCount: Int?
   }
   
   struct ActionProps {
@@ -42,7 +69,10 @@ extension ViewController2: ReduxCompatibleViewType {
 
 extension ViewController2: ReduxPropMapperType {
   static func mapState(state: ReduxState, outProps: OutProps) -> StateProps {
-    return StateProps(autocompleteInput: state.autocompleteInput)
+    return StateProps(
+      autocompleteInput: state.autocompleteInput,
+      resultCount: state.iTunesResults?.resultCount
+    )
   }
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
