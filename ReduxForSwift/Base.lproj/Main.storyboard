@@ -133,13 +133,13 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <action selector="updateAutocompleteInput:" destination="dYW-23-Aqh" eventType="editingChanged" id="yCT-71-R90"/>
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kgj-Hb-gLc">
-                                <rect key="frame" x="16" y="92" width="343" height="559"/>
+                                <rect key="frame" x="16" y="84" width="343" height="567"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesTrackCell" rowHeight="231" id="Chn-mP-aHZ" customClass="iTunesTrackCell" customModule="ReduxForSwift" customModuleProvider="target">
@@ -199,7 +199,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Pag-1f-otr" firstAttribute="top" secondItem="YLi-Sr-vM8" secondAttribute="top" constant="16" id="RSw-iD-JUM"/>
-                            <constraint firstItem="Kgj-Hb-gLc" firstAttribute="top" secondItem="Pag-1f-otr" secondAttribute="bottom" constant="16" id="YdZ-CR-hoP"/>
+                            <constraint firstItem="Kgj-Hb-gLc" firstAttribute="top" secondItem="Pag-1f-otr" secondAttribute="bottom" constant="8" id="YdZ-CR-hoP"/>
                             <constraint firstItem="YLi-Sr-vM8" firstAttribute="bottom" secondItem="Kgj-Hb-gLc" secondAttribute="bottom" constant="16" id="a8t-p1-Ggb"/>
                             <constraint firstItem="Kgj-Hb-gLc" firstAttribute="leading" secondItem="2s0-eJ-pUl" secondAttribute="leading" constant="16" id="c63-v4-tYA"/>
                             <constraint firstAttribute="trailing" secondItem="Kgj-Hb-gLc" secondAttribute="trailing" constant="16" id="hoz-XC-9YS"/>

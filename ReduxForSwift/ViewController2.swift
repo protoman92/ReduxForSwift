@@ -19,6 +19,16 @@ final class ViewController2: UIViewController {
     didSet { self.variableProps.map(self.didSetProps) }
   }
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "View controller 1",
+      style: .plain,
+      target: self,
+      action: #selector(self.goToViewController1))
+  }
+  
   func didSetProps(_ props: VariableProps) {
     let state = props.nextState
     self.autocompleteInput.text = state.autocompleteInput
@@ -28,6 +38,10 @@ final class ViewController2: UIViewController {
   
   @IBAction func updateAutocompleteInput(_ sender: UITextField) {
     self.variableProps?.action.updateAutocompleteInput(sender.text)
+  }
+  
+  @objc func goToViewController1(_ sender: UIBarButtonItem) {
+    self.variableProps?.action.goToViewController1()
   }
 }
 
@@ -66,6 +80,7 @@ extension ViewController2: ReduxCompatibleViewType {
   }
   
   struct ActionProps {
+    let goToViewController1: () -> Void
     let updateAutocompleteInput: (String?) -> Void
   }
 }
@@ -82,6 +97,7 @@ extension ViewController2: ReduxPropMapperType {
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
                         outProps: OutProps) -> ActionProps {
     return ActionProps(
+      goToViewController1: {dispatch(AppScreen.viewController1)},
       updateAutocompleteInput: {dispatch(AppAction.updateAutocompleteInput($0))}
     )
   }
