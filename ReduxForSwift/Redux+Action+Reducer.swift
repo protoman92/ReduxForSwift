@@ -11,6 +11,7 @@ import ReactiveRedux
 struct AppState {
   var autocompleteInput: String?
   var counter: Int
+  var iTunesResults: iTunesResult?
   var textValueList: [String?]
   
   init() {
@@ -42,12 +43,30 @@ struct AppState {
     clone.autocompleteInput = input
     return clone
   }
+  
+  func updateITunesResults(_ results: iTunesResult?) -> AppState {
+    var clone = self
+    clone.iTunesResults = results
+    return clone
+  }
+  
+  func iTunesTrack(at index: Int) -> iTunesTrack? {
+    if
+      let tracks = self.iTunesResults?.results,
+      index >= 0 && index < tracks.count
+    {
+      return tracks[index]
+    } else {
+      return nil
+    }
+  }
 }
 
 enum AppAction: ReduxActionType {
   case incrementCounter
   case updateTextValue(Int, String?)
   case updateAutocompleteInput(String?)
+  case updateITunesResults(iTunesResult?)
 }
 
 final class AppReducer {
@@ -65,6 +84,9 @@ final class AppReducer {
         
       case .updateAutocompleteInput(let input):
         return state.updateAutocompleteInput(input)
+        
+      case .updateITunesResults(let results):
+        return state.updateITunesResults(results)
       }
       
     default: return state
