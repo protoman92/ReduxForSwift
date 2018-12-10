@@ -10,6 +10,7 @@
 		D32FBDC621BE7707009AA21B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FBDC521BE7707009AA21B /* Repository.swift */; };
 		D32FBDC821BE7964009AA21B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FBDC721BE7964009AA21B /* Data.swift */; };
 		D32FBDCA21BE7B8D009AA21B /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FBDC921BE7B8D009AA21B /* JSONDecoder.swift */; };
+		D32FBDCC21BE8385009AA21B /* iTunesTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FBDCB21BE8385009AA21B /* iTunesTrackCell.swift */; };
 		D330B23221B92F890077B4D2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330B23121B92F890077B4D2 /* NavigationController.swift */; };
 		D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE721B4378E005D0F1B /* AppDelegate.swift */; };
 		D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE921B4378E005D0F1B /* ViewController1.swift */; };
@@ -34,6 +35,7 @@
 		D32FBDC521BE7707009AA21B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D32FBDC721BE7964009AA21B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D32FBDC921BE7B8D009AA21B /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		D32FBDCB21BE8385009AA21B /* iTunesTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesTrackCell.swift; sourceTree = "<group>"; };
 		D330B23121B92F890077B4D2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D3322EE421B4378E005D0F1B /* ReduxForSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxForSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3322EE721B4378E005D0F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				D3322EE721B4378E005D0F1B /* AppDelegate.swift */,
 				D32FBDC721BE7964009AA21B /* Data.swift */,
 				D3322EFB21B43B6C005D0F1B /* Dependency.swift */,
+				D32FBDCB21BE8385009AA21B /* iTunesTrackCell.swift */,
 				D32FBDC921BE7B8D009AA21B /* JSONDecoder.swift */,
 				D330B23121B92F890077B4D2 /* NavigationController.swift */,
 				D3322EF921B43886005D0F1B /* Redux.swift */,
@@ -256,6 +259,7 @@
 				D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */,
 				D32FBDCA21BE7B8D009AA21B /* JSONDecoder.swift in Sources */,
 				D3B3E3D421BB654400990112 /* Router.swift in Sources */,
+				D32FBDCC21BE8385009AA21B /* iTunesTrackCell.swift in Sources */,
 				D3D112B421B9E70400E36C66 /* TableCell.swift in Sources */,
 				D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */,
 				D3322EFC21B43B6C005D0F1B /* Dependency.swift in Sources */,
