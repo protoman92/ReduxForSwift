@@ -20,8 +20,10 @@ final class ViewController2: UIViewController {
   }
   
   func didSetProps(_ props: VariableProps) {
-    self.autocompleteInput.text = props.nextState.autocompleteInput
+    let state = props.nextState
+    self.autocompleteInput.text = state.autocompleteInput
     self.resultTable.reloadData()
+    UIApplication.shared.isNetworkActivityIndicatorVisible = state.progress ?? false
   }
   
   @IBAction func updateAutocompleteInput(_ sender: UITextField) {
@@ -60,6 +62,7 @@ extension ViewController2: ReduxCompatibleViewType {
   struct StateProps: Equatable {
     let autocompleteInput: String?
     let resultCount: Int?
+    let progress: Bool?
   }
   
   struct ActionProps {
@@ -71,7 +74,8 @@ extension ViewController2: ReduxPropMapperType {
   static func mapState(state: ReduxState, outProps: OutProps) -> StateProps {
     return StateProps(
       autocompleteInput: state.autocompleteInput,
-      resultCount: state.iTunesResults?.resultCount
+      resultCount: state.iTunesResults?.resultCount,
+      progress: state.autocompleteProgress
     )
   }
   

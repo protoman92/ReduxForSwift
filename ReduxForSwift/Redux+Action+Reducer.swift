@@ -10,6 +10,7 @@ import ReactiveRedux
 
 struct AppState {
   var autocompleteInput: String?
+  var autocompleteProgress: Bool?
   var counter: Int
   var iTunesResults: iTunesResult?
   var textValueList: [String?]
@@ -44,6 +45,12 @@ struct AppState {
     return clone
   }
   
+  func updateAutocompleteProgress(_ progress: Bool?) -> AppState {
+    var clone = self
+    clone.autocompleteProgress = progress
+    return clone
+  }
+  
   func updateITunesResults(_ results: iTunesResult?) -> AppState {
     var clone = self
     clone.iTunesResults = results
@@ -66,6 +73,7 @@ enum AppAction: ReduxActionType {
   case incrementCounter
   case updateTextValue(Int, String?)
   case updateAutocompleteInput(String?)
+  case updateAutocompleteProgress(Bool?)
   case updateITunesResults(iTunesResult?)
 }
 
@@ -84,6 +92,9 @@ final class AppReducer {
         
       case .updateAutocompleteInput(let input):
         return state.updateAutocompleteInput(input)
+        
+      case .updateAutocompleteProgress(let progress):
+        return state.updateAutocompleteProgress(progress)
         
       case .updateITunesResults(let results):
         return state.updateITunesResults(results)
