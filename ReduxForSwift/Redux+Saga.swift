@@ -32,6 +32,7 @@ final class AppSaga {
   {
     return Redux.Saga.Effect<AppState, String>
       .just(input).call(api.searchITunes)
-      .doOnValue({print($0)})
+      .put(AppAction.updateITunesResults)
+      .catchError({_ in ()})
   }
 }

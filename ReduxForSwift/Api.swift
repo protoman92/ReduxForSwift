@@ -18,7 +18,8 @@ struct AppApi: AppApiType {
     
     comps.queryItems = [
       URLQueryItem(name: "term", value: input),
-      URLQueryItem(name: "limit", value: "5")
+      URLQueryItem(name: "limit", value: "5"),
+      URLQueryItem(name: "media", value: "music")
     ]
     
     let task = URLSession.shared.dataTask(with: comps.url!) {cb($0, $2)}
