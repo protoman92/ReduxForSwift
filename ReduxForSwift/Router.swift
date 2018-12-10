@@ -10,8 +10,8 @@ import ReactiveRedux
 import UIKit
 
 enum AppScreen: ReduxNavigationScreenType {
+  case iTunesSearch
   case viewController1
-  case viewController2
 }
 
 final class AppRouter: ReduxRouterType {
@@ -27,17 +27,17 @@ final class AppRouter: ReduxRouterType {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
     switch screen {
+    case .iTunesSearch:
+      let vc = storyboard
+        .instantiateViewController(withIdentifier: "iTunesController")
+        as! iTunesController
+      
+      self.controller?.setViewControllers([vc], animated: true)
+      
     case .viewController1:
       let vc = storyboard
         .instantiateViewController(withIdentifier: "ViewController1")
         as! ViewController1
-      
-      self.controller?.setViewControllers([vc], animated: true)
-      
-    case .viewController2:
-      let vc = storyboard
-        .instantiateViewController(withIdentifier: "ViewController2")
-        as! ViewController2
       
       self.controller?.setViewControllers([vc], animated: true)
     }

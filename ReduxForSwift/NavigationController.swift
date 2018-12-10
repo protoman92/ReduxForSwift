@@ -25,7 +25,7 @@ extension NavigationController: UINavigationControllerDelegate {
     case let vc as ViewController1:
       self.dependency?.propInjector.injectProps(controller: vc, outProps: ())
       
-    case let vc as ViewController2:
+    case let vc as iTunesController:
       self.dependency?.propInjector.injectProps(controller: vc, outProps: ())
       
     default:

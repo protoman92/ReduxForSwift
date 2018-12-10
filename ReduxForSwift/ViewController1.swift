@@ -1,5 +1,5 @@
 //
-//  ViewController1.swift
+//  iTunesController.swift
 //  ReduxForSwift
 //
 //  Created by Hai Pham on 12/2/18.
@@ -30,10 +30,10 @@ class ViewController1: UIViewController {
     self.counterLabel.layer.borderColor = UIColor.gray.cgColor
     
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-      title: "View controller 2",
+      title: "iTunes search",
       style: .plain,
       target: self,
-      action: #selector(self.goToViewController2))
+      action: #selector(self.goToITunesSearch))
   }
   
   func didSetProps(_ props: VariableProps) {
@@ -45,8 +45,8 @@ class ViewController1: UIViewController {
     self.variableProps?.action.incrementCounter()
   }
   
-  @objc func goToViewController2(_ sender: UIBarButtonItem) {
-    self.variableProps?.action.goToViewController2()
+  @objc func goToITunesSearch(_ sender: UIBarButtonItem) {
+    self.variableProps?.action.goToITunesSearch()
   }
 }
 
@@ -85,7 +85,7 @@ extension ViewController1: ReduxCompatibleViewType {
   
   struct ActionProps {
     let incrementCounter: () -> Void
-    let goToViewController2: () -> Void
+    let goToITunesSearch: () -> Void
   }
 }
 
@@ -99,7 +99,7 @@ extension ViewController1: ReduxPropMapperType {
                         outProps: OutProps) -> ActionProps {
     return ActionProps(
       incrementCounter: {dispatch(AppAction.incrementCounter)},
-      goToViewController2: {dispatch(AppScreen.viewController2)}
+      goToITunesSearch: {dispatch(AppScreen.iTunesSearch)}
     )
   }
 }

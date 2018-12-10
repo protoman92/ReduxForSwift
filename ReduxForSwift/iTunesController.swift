@@ -1,5 +1,5 @@
 //
-//  ViewController2.swift
+//  iTunesController.swift
 //  ReduxForSwift
 //
 //  Created by Hai Pham on 12/8/18.
@@ -9,7 +9,7 @@
 import ReactiveRedux
 import UIKit
 
-final class ViewController2: UIViewController {
+final class iTunesController: UIViewController {
   @IBOutlet private weak var autocompleteInput: UITextField!
   @IBOutlet private weak var resultTable: UITableView!
   
@@ -45,7 +45,7 @@ final class ViewController2: UIViewController {
   }
 }
 
-extension ViewController2: UITableViewDataSource {
+extension iTunesController: UITableViewDataSource {
   func tableView(_ tableView: UITableView,
                  numberOfRowsInSection section: Int) -> Int {
     return self.variableProps?.nextState.resultCount ?? 0
@@ -62,14 +62,14 @@ extension ViewController2: UITableViewDataSource {
   }
 }
 
-extension ViewController2: UITableViewDelegate {
+extension iTunesController: UITableViewDelegate {
   func tableView(_ tableView: UITableView,
                  heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 56
   }
 }
 
-extension ViewController2: ReduxCompatibleViewType {
+extension iTunesController: ReduxCompatibleViewType {
   typealias ReduxState = AppState
   typealias OutProps = ()
   
@@ -85,7 +85,7 @@ extension ViewController2: ReduxCompatibleViewType {
   }
 }
 
-extension ViewController2: ReduxPropMapperType {
+extension iTunesController: ReduxPropMapperType {
   static func mapState(state: ReduxState, outProps: OutProps) -> StateProps {
     return StateProps(
       autocompleteInput: state.autocompleteInput,
