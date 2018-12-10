@@ -6,6 +6,7 @@
 //  Copyright © 2018 swiften. All rights reserved.
 //
 
+import ReactiveRedux
 import UIKit
 
 @UIApplicationMain
@@ -20,7 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       fatalError()
     }
     
-    let dependency = Dependency(topController)
+    let api = AppApi()
+    let repository = AppRepository(api, JSONDecoder())
+    let router = AppRouter(topController)
+    let sagas = AppSaga.sagas(repository)
+    
+    let store = Redux.Middleware.applyMiddlewares([
+      Redux.Middleware.Router.Provider(router: router).middleware,
+      Redux.Middleware.Saga.Provider(effects: sagas).middleware
+      ])(SimpleReduxStore(initialState: AppState(), reducer: AppReducer.reduce))
+
+    let dependency = Dependency(store: store)
     topController.dependency = dependency
     return true
   }

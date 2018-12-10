@@ -15,13 +15,8 @@ final class Dependency {
   let propInjector: Redux.UI.PropInjector<State>
   let store: Store
   
-  init(_ topController: UINavigationController) {
-    let router = AppRouter(topController)
-    
-    self.store = Redux.Middleware.applyMiddlewares([
-      Redux.Middleware.Router.Provider(router: router).middleware
-      ])(SimpleReduxStore(initialState: AppState(), reducer: AppReducer.reduce))
-
+  init(store: Redux.Store.DelegateStore<State>) {
+    self.store = store
     self.propInjector = Redux.UI.PropInjector(store: self.store)
   }
 }
