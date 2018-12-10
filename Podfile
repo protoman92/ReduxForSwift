@@ -8,6 +8,12 @@ target 'ReduxForSwift' do
   # Pods for ReduxForSwift
   pod 'ReactiveRedux',
     git: 'https://github.com/protoman92/ReactiveRedux-Swift.git',
-    subspecs: ['Main', 'UI', 'Middleware', 'Middleware+Router']
+    subspecs: [
+      'Main',
+      'UI',
+      'Middleware',
+      'Middleware+Router',
+      'Middleware+Saga'
+    ]
 
 end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32FBDC621BE7707009AA21B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FBDC521BE7707009AA21B /* Repository.swift */; };
+		D32FBDC821BE7964009AA21B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FBDC721BE7964009AA21B /* Data.swift */; };
+		D32FBDCA21BE7B8D009AA21B /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32FBDC921BE7B8D009AA21B /* JSONDecoder.swift */; };
 		D330B23221B92F890077B4D2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330B23121B92F890077B4D2 /* NavigationController.swift */; };
 		D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE721B4378E005D0F1B /* AppDelegate.swift */; };
 		D3322EEA21B4378E005D0F1B /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EE921B4378E005D0F1B /* ViewController1.swift */; };
@@ -19,6 +22,8 @@
 		D3B3E3D221BB645500990112 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3E3D121BB645500990112 /* ViewController2.swift */; };
 		D3B3E3D421BB654400990112 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3E3D321BB654400990112 /* Router.swift */; };
 		D3D112B421B9E70400E36C66 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D112B321B9E70400E36C66 /* TableCell.swift */; };
+		D3F9C52221BD8AB000E9CBCA /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9C52121BD8AB000E9CBCA /* Api.swift */; };
+		D3F9C52421BD9F6100E9CBCA /* Redux+Saga.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9C52321BD9F6100E9CBCA /* Redux+Saga.swift */; };
 		FD428F158DC3041E3A9FF737 /* Pods_ReduxForSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +31,9 @@
 		095771E82292B244F92D0F9D /* Pods_ReduxForSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxForSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8A5AC4E6F43B2CBFE3FCCE /* Pods-ReduxForSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxForSwift.release.xcconfig"; path = "Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift.release.xcconfig"; sourceTree = "<group>"; };
 		8ACB542A6FA4474566D2063F /* Pods-ReduxForSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxForSwift.debug.xcconfig"; path = "Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D32FBDC521BE7707009AA21B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D32FBDC721BE7964009AA21B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D32FBDC921BE7B8D009AA21B /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		D330B23121B92F890077B4D2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D3322EE421B4378E005D0F1B /* ReduxForSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxForSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3322EE721B4378E005D0F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +48,8 @@
 		D3B3E3D121BB645500990112 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		D3B3E3D321BB654400990112 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D3D112B321B9E70400E36C66 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		D3F9C52121BD8AB000E9CBCA /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		D3F9C52321BD9F6100E9CBCA /* Redux+Saga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Redux+Saga.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +103,16 @@
 			isa = PBXGroup;
 			children = (
 				D3322EF321B43793005D0F1B /* Info.plist */,
+				D3F9C52121BD8AB000E9CBCA /* Api.swift */,
 				D3322EE721B4378E005D0F1B /* AppDelegate.swift */,
+				D32FBDC721BE7964009AA21B /* Data.swift */,
 				D3322EFB21B43B6C005D0F1B /* Dependency.swift */,
+				D32FBDC921BE7B8D009AA21B /* JSONDecoder.swift */,
 				D330B23121B92F890077B4D2 /* NavigationController.swift */,
 				D3322EF921B43886005D0F1B /* Redux.swift */,
 				D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */,
+				D3F9C52321BD9F6100E9CBCA /* Redux+Saga.swift */,
+				D32FBDC521BE7707009AA21B /* Repository.swift */,
 				D3B3E3D321BB654400990112 /* Router.swift */,
 				D3D112B321B9E70400E36C66 /* TableCell.swift */,
 				D3322EE921B4378E005D0F1B /* ViewController1.swift */,
@@ -188,6 +203,8 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReduxForSwift/Pods-ReduxForSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ReactiveRedux/ReactiveRedux.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftFP/SwiftFP.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -195,6 +212,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveRedux.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftFP.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,11 +254,16 @@
 				D3B3E3D221BB645500990112 /* ViewController2.swift in Sources */,
 				D330B23221B92F890077B4D2 /* NavigationController.swift in Sources */,
 				D3322EE821B4378E005D0F1B /* AppDelegate.swift in Sources */,
+				D32FBDCA21BE7B8D009AA21B /* JSONDecoder.swift in Sources */,
 				D3B3E3D421BB654400990112 /* Router.swift in Sources */,
 				D3D112B421B9E70400E36C66 /* TableCell.swift in Sources */,
 				D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */,
 				D3322EFC21B43B6C005D0F1B /* Dependency.swift in Sources */,
+				D32FBDC821BE7964009AA21B /* Data.swift in Sources */,
+				D3F9C52221BD8AB000E9CBCA /* Api.swift in Sources */,
+				D3F9C52421BD9F6100E9CBCA /* Redux+Saga.swift in Sources */,
 				D3322EFA21B43886005D0F1B /* Redux.swift in Sources */,
+				D32FBDC621BE7707009AA21B /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
