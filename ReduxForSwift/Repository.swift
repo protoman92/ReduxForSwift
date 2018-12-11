@@ -16,11 +16,13 @@ struct AppRepository: AppRepositoryType {
   private let _api: AppApiType
   private let _decoder: JSONDecoderType
   
+  /// Use JSONDecoderType here to allow mocks.
   init(_ api: AppApiType, _ decoder: JSONDecoderType) {
     self._api = api
     self._decoder = decoder
   }
   
+  /// Call the iTunes API and decode the result into a custom data structure.
   func searchITunes(_ input: String, _ cb: @escaping (iTunesResult?, Error?) -> Void) {
     self._api.searchITunes(input) {(d, err) in
       do {

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Use this protocol to represent a JSON decoder.
 protocol JSONDecoderType {
   func decode<D>(_ type: D.Type, from data: Data) throws -> D where D: Decodable
 }

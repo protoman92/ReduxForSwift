@@ -13,6 +13,12 @@ protocol AppApiType {
 }
 
 struct AppApi: AppApiType {
+  private let _urlSession: URLSession
+  
+  init(_ urlSession: URLSession) {
+    self._urlSession = urlSession
+  }
+  
   func searchITunes(_ input: String, _ cb: @escaping (Data?, Error?) -> Void) {
     var comps = URLComponents(string: "https://itunes.apple.com/search")!
     
@@ -22,7 +28,7 @@ struct AppApi: AppApiType {
       URLQueryItem(name: "media", value: "music")
     ]
     
-    let task = URLSession.shared.dataTask(with: comps.url!) {cb($0, $2)}
+    let task = self._urlSession.dataTask(with: comps.url!) {cb($0, $2)}
     task.resume()
   }
 }

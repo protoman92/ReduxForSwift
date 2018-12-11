@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       fatalError()
     }
     
-    let api = AppApi()
+    let api = AppApi(URLSession.shared)
     let repository = AppRepository(api, JSONDecoder())
     let router = AppRouter(topController)
     let sagas = AppSaga.sagas(repository)
