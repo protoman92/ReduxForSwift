@@ -96,6 +96,7 @@ extension ViewController1: ReduxPropMapperType {
   }
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
+                        state: ReduxState,
                         outProps: OutProps) -> ActionProps {
     return ActionProps(
       incrementCounter: {dispatch(AppAction.incrementCounter)},

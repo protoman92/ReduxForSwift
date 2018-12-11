@@ -9,6 +9,7 @@
 struct iTunesTrack {
   let artistName: String
   let currency: String
+  let previewUrl: String
   let trackName: String
   let trackPrice: Double
   let trackTimeMillis: Int

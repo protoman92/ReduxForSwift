@@ -12,6 +12,7 @@ import UIKit
 enum AppScreen: ReduxNavigationScreenType {
   case iTunesSearch
   case viewController1
+  case externalUrl(String?)
 }
 
 final class AppRouter: ReduxRouterType {
@@ -40,6 +41,11 @@ final class AppRouter: ReduxRouterType {
         as! ViewController1
       
       self.controller?.setViewControllers([vc], animated: true)
+      
+    case .externalUrl(let urlString):
+      if let urlStr = urlString, let url = URL(string: urlStr) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+      }
     }
   }
 }

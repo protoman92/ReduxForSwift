@@ -48,6 +48,7 @@ extension TableCell: ReduxPropMapperType {
   }
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
+                        state: ReduxState,
                         outProps: OutProps) -> TableCell.ActionProps {
     return ActionProps(
       updateTextValue: {dispatch(AppAction.updateTextValue(outProps, $0))})

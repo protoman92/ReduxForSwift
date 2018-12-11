@@ -95,6 +95,7 @@ extension iTunesController: ReduxPropMapperType {
   }
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
+                        state: ReduxState,
                         outProps: OutProps) -> ActionProps {
     return ActionProps(
       goToViewController1: {dispatch(AppScreen.viewController1)},

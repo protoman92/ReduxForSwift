@@ -176,15 +176,26 @@
                                                         <constraint firstItem="blt-nv-0eV" firstAttribute="leading" secondItem="AGe-XY-rgG" secondAttribute="leading" id="ztJ-n8-xJk"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W89-Ag-EaB">
+                                                    <rect key="frame" x="0.0" y="4" width="343" height="51.5"/>
+                                                    <connections>
+                                                        <action selector="showPreview:" destination="Chn-mP-aHZ" eventType="touchDown" id="TGG-9W-otW"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="W89-Ag-EaB" firstAttribute="leading" secondItem="ckE-wu-3Kr" secondAttribute="leading" id="4Er-Xw-KuO"/>
+                                                <constraint firstItem="W89-Ag-EaB" firstAttribute="top" secondItem="ckE-wu-3Kr" secondAttribute="top" id="6By-ef-Rpj"/>
+                                                <constraint firstItem="W89-Ag-EaB" firstAttribute="trailing" secondItem="ckE-wu-3Kr" secondAttribute="trailing" id="M5E-Jf-Vfh"/>
                                                 <constraint firstAttribute="trailing" secondItem="ckE-wu-3Kr" secondAttribute="trailing" id="QPt-O8-wHg"/>
+                                                <constraint firstItem="W89-Ag-EaB" firstAttribute="bottom" secondItem="ckE-wu-3Kr" secondAttribute="bottom" id="UOC-XJ-uzC"/>
                                                 <constraint firstItem="ckE-wu-3Kr" firstAttribute="leading" secondItem="ktT-85-tDM" secondAttribute="leading" id="UmJ-Oj-yaQ"/>
                                                 <constraint firstItem="ckE-wu-3Kr" firstAttribute="top" secondItem="ktT-85-tDM" secondAttribute="top" constant="4" id="oh8-7g-R71"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="artistName" destination="blt-nv-0eV" id="x9U-70-AxS"/>
+                                            <outlet property="rootButton" destination="W89-Ag-EaB" id="1RW-JK-gZR"/>
                                             <outlet property="rootView" destination="ckE-wu-3Kr" id="mgE-o5-CXi"/>
                                             <outlet property="trackName" destination="AGe-XY-rgG" id="6HC-Hg-eCE"/>
                                         </connections>

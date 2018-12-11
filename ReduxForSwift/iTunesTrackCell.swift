@@ -12,7 +12,8 @@ import UIKit
 final class iTunesTrackCell: UITableViewCell {
   @IBOutlet private weak var rootView: UIView!
   @IBOutlet private weak var trackName: UILabel!
-  @IBOutlet weak var artistName: UILabel!
+  @IBOutlet private weak var artistName: UILabel!
+  @IBOutlet private weak var rootButton: UIButton!
   
   var staticProps: StaticProps?
   
@@ -25,6 +26,10 @@ final class iTunesTrackCell: UITableViewCell {
     self.rootView.layer.borderColor = UIColor.gray.cgColor
     self.rootView.layer.borderWidth = 1
     self.rootView.layer.cornerRadius = 8
+  }
+  
+  @IBAction func showPreview(_ sender: UIButton) {
+    self.variableProps?.action.showPreview()
   }
   
   func didSetProps(_ props: VariableProps) {
@@ -41,7 +46,9 @@ extension iTunesTrackCell: ReduxCompatibleViewType {
     let iTunesTrack: iTunesTrack?
   }
   
-  typealias ActionProps = ()
+  struct ActionProps {
+    let showPreview: () -> Void
+  }
 }
 
 extension iTunesTrackCell: ReduxPropMapperType {
@@ -50,7 +57,12 @@ extension iTunesTrackCell: ReduxPropMapperType {
   }
   
   static func mapAction(dispatch: @escaping Redux.Store.Dispatch,
+                        state: ReduxState,
                         outProps: OutProps) -> ActionProps {
-    return ()
+    let track = state.iTunesTrack(at: outProps)
+    
+    return ActionProps(
+      showPreview: {dispatch(AppScreen.externalUrl(track?.previewUrl))}
+    )
   }
 }
