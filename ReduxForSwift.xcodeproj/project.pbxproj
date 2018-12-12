@@ -17,7 +17,6 @@
 		D3322EED21B4378E005D0F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EEB21B4378E005D0F1B /* Main.storyboard */; };
 		D3322EEF21B43793005D0F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3322EEE21B43793005D0F1B /* Assets.xcassets */; };
 		D3322EF221B43793005D0F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EF021B43793005D0F1B /* LaunchScreen.storyboard */; };
-		D3322EFA21B43886005D0F1B /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EF921B43886005D0F1B /* Redux.swift */; };
 		D3322EFC21B43B6C005D0F1B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EFB21B43B6C005D0F1B /* Dependency.swift */; };
 		D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */; };
 		D3B3E3D221BB645500990112 /* iTunesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3E3D121BB645500990112 /* iTunesController.swift */; };
@@ -44,7 +43,6 @@
 		D3322EEE21B43793005D0F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3322EF121B43793005D0F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3322EF321B43793005D0F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3322EF921B43886005D0F1B /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
 		D3322EFB21B43B6C005D0F1B /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
 		D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Redux+Action+Reducer.swift"; sourceTree = "<group>"; };
 		D3B3E3D121BB645500990112 /* iTunesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesController.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				D32FBDCB21BE8385009AA21B /* iTunesTrackCell.swift */,
 				D32FBDC921BE7B8D009AA21B /* JSONDecoder.swift */,
 				D330B23121B92F890077B4D2 /* NavigationController.swift */,
-				D3322EF921B43886005D0F1B /* Redux.swift */,
 				D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */,
 				D3F9C52321BD9F6100E9CBCA /* Redux+Saga.swift */,
 				D32FBDC521BE7707009AA21B /* Repository.swift */,
@@ -266,7 +263,6 @@
 				D32FBDC821BE7964009AA21B /* Data.swift in Sources */,
 				D3F9C52221BD8AB000E9CBCA /* Api.swift in Sources */,
 				D3F9C52421BD9F6100E9CBCA /* Redux+Saga.swift in Sources */,
-				D3322EFA21B43886005D0F1B /* Redux.swift in Sources */,
 				D32FBDC621BE7707009AA21B /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

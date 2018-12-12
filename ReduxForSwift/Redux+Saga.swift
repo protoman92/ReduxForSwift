@@ -16,7 +16,7 @@ final class AppSaga {
     return [
       Redux.Saga.Effect.takeLatest(
         paramExtractor: self.autocompleteParam,
-        effectCreator: {self.verboseAutocompleteSaga(api, $0)},
+        effectCreator: {self.autocompleteSaga(api, $0)},
         options: Redux.Saga.TakeOptions.builder().with(debounce: 0.5).build())
     ]
   }

@@ -10,7 +10,9 @@ target 'ReduxForSwift' do
     git: 'https://github.com/protoman92/ReactiveRedux-Swift.git',
     subspecs: [
       'Main',
+      'SimpleStore',
       'UI',
+      'UI+Test',
       'Middleware',
       'Middleware+Router',
       'Middleware+Saga'

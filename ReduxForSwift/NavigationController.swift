@@ -19,7 +19,7 @@ final class NavigationController: UINavigationController {
 
 extension NavigationController: UINavigationControllerDelegate {
   func navigationController(_ navigationController: UINavigationController,
-                            didShow viewController: UIViewController,
+                            willShow viewController: UIViewController,
                             animated: Bool) {
     switch viewController {
     case let vc as ViewController1:

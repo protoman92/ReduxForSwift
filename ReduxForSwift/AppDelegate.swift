@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let store = Redux.Middleware.applyMiddlewares([
       Redux.Middleware.Router.Provider(router: router).middleware,
       Redux.Middleware.Saga.Provider(effects: sagas).middleware
-      ])(SimpleReduxStore(initialState: AppState(), reducer: AppReducer.reduce))
+      ])(Redux.Store.SimpleStore.create(AppState(), AppReducer.reduce))
 
     let dependency = Dependency(store: store)
     topController.dependency = dependency
