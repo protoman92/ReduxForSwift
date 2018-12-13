@@ -35,7 +35,7 @@ final class AppSaga {
     return Redux.Saga.Effect<AppState, Bool>
       .put(true, actionCreator: AppAction.updateAutocompleteProgress)
       .then(input).call(api.searchITunes)
-      .put(AppAction.updateITunesResults)
+      .put(AppAction.updateITunesResults, usingQueue: .global(qos: .background))
       .catchError({_ in ()})
       .then(false).put(AppAction.updateAutocompleteProgress)
   }

@@ -22,6 +22,7 @@
 		D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */; };
 		D3382E0821C2602500AB146E /* iTunesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3382E0621C2602500AB146E /* iTunesController.swift */; };
 		D3382E0921C2602500AB146E /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3382E0721C2602500AB146E /* BaseTest.swift */; };
+		D33D9C9121C2776F00D13BC4 /* AutocompleteSaga.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D9C9021C2776F00D13BC4 /* AutocompleteSaga.swift */; };
 		D3B3E3D221BB645500990112 /* iTunesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3E3D121BB645500990112 /* iTunesController.swift */; };
 		D3B3E3D421BB654400990112 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3E3D321BB654400990112 /* Router.swift */; };
 		D3D112B421B9E70400E36C66 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D112B321B9E70400E36C66 /* TableCell.swift */; };
@@ -65,6 +66,7 @@
 		D3382DFC21C22ECB00AB146E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3382E0621C2602500AB146E /* iTunesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesController.swift; sourceTree = "<group>"; };
 		D3382E0721C2602500AB146E /* BaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		D33D9C9021C2776F00D13BC4 /* AutocompleteSaga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteSaga.swift; sourceTree = "<group>"; };
 		D3B3E3D121BB645500990112 /* iTunesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesController.swift; sourceTree = "<group>"; };
 		D3B3E3D321BB654400990112 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D3D112B321B9E70400E36C66 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				D3382DFC21C22ECB00AB146E /* Info.plist */,
 				D3382E0721C2602500AB146E /* BaseTest.swift */,
 				D3382E0621C2602500AB146E /* iTunesController.swift */,
+				D33D9C9021C2776F00D13BC4 /* AutocompleteSaga.swift */,
 			);
 			path = ReduxForSwiftTests;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			files = (
 				D3382E0921C2602500AB146E /* BaseTest.swift in Sources */,
 				D3382E0821C2602500AB146E /* iTunesController.swift in Sources */,
+				D33D9C9121C2776F00D13BC4 /* AutocompleteSaga.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

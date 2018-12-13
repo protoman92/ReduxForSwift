@@ -77,6 +77,8 @@ enum AppAction: ReduxActionType {
   case updateITunesResults(iTunesResult?)
 }
 
+extension AppAction: Equatable {}
+
 final class AppReducer {
   typealias State = Dependency.State
   
