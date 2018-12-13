@@ -17,6 +17,6 @@ class BaseUITest: XCTestCase {
   override func setUp() {
     super.setUp()
     self.mockInjector = Redux.UI.MockInjector(forState: AppState.self)
-    self.mockStaticProps = Redux.UI.MockStaticProps(self.mockInjector)
+    self.mockStaticProps = Redux.UI.MockStaticProps(injector: self.mockInjector)
   }
 }

@@ -11,7 +11,9 @@ import XCTest
 @testable import ReduxForSwift
 
 final class iTunesControllerTest: BaseUITest {
-  private var controller: iTunesController!
+  typealias Controller = iTunesController
+  typealias Cell = iTunesTrackCell
+  private var controller: Controller!
   
   override func setUp() {
     super.setUp()
@@ -19,8 +21,9 @@ final class iTunesControllerTest: BaseUITest {
     
     self.controller = storyboard
       .instantiateViewController(withIdentifier: "iTunesController")
-      as? iTunesController
+      as? Controller
     
+    /// Trigger viewDidLoad
     _ = self.controller.view
   }
 }
@@ -42,26 +45,24 @@ extension iTunesControllerTest {
       var goToViewController1 = 0
       var updatedAutocompleteInput: String? = nil
 
-      let stateProps = iTunesController.StateProps(
+      let state = Controller.StateProps(
         autocompleteInput: query,
         resultCount: resultCount,
         progress: progress
       )
       
-      let actionProps = iTunesController.ActionProps(
+      let action = Controller.ActionProps(
         goToViewController1: {goToViewController1 += 1},
         updateAutocompleteInput: {updatedAutocompleteInput = $0}
       )
       
       /// When
-      vc.variableProps = Redux.UI
-        .VariableProps(false, nil, stateProps, actionProps)
+      vc.variableProps = Controller.VariableProps(nextState: state, action: action)
+      vc.autocompleteInput.sendActions(for: .editingChanged)
       
       app.sendAction(
         vc.navigationItem.rightBarButtonItem!.action!,
         to: vc, from: self, for: nil)
-
-      vc.autocompleteInput.sendActions(for: .editingChanged)
       
       /// Then
       XCTAssertEqual(vc.autocompleteInput.text, query)
@@ -82,6 +83,6 @@ extension iTunesControllerTest {
       cellForRowAt: IndexPath(row: 0, section: 0))
 
     /// Then
-    XCTAssertTrue(self.mockInjector.didInject(iTunesTrackCell.self, times: 1))
+    XCTAssertTrue(self.mockInjector.didInject(Cell.self, times: 1))
   }
 }
