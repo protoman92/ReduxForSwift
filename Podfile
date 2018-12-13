@@ -12,10 +12,14 @@ target 'ReduxForSwift' do
       'Main',
       'SimpleStore',
       'UI',
-      'UI+Test',
       'Middleware',
       'Middleware+Router',
       'Middleware+Saga'
     ]
+    
+  target 'ReduxForSwiftTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
 end

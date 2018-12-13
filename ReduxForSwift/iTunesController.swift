@@ -10,8 +10,8 @@ import ReactiveRedux
 import UIKit
 
 final class iTunesController: UIViewController {
-  @IBOutlet private weak var autocompleteInput: UITextField!
-  @IBOutlet private weak var resultTable: UITableView!
+  @IBOutlet weak var autocompleteInput: UITextField!
+  @IBOutlet weak var resultTable: UITableView!
   
   var staticProps: StaticProps?
   
@@ -29,7 +29,7 @@ final class iTunesController: UIViewController {
       action: #selector(self.goToViewController1))
   }
   
-  func didSetProps(_ props: VariableProps) {
+  private func didSetProps(_ props: VariableProps) {
     let state = props.nextState
     self.autocompleteInput.text = state.autocompleteInput
     self.resultTable.reloadData()
