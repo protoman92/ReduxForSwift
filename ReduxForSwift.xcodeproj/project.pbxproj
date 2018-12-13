@@ -20,6 +20,8 @@
 		D3322EF221B43793005D0F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3322EF021B43793005D0F1B /* LaunchScreen.storyboard */; };
 		D3322EFC21B43B6C005D0F1B /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EFB21B43B6C005D0F1B /* Dependency.swift */; };
 		D3322EFE21B43D8E005D0F1B /* Redux+Action+Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */; };
+		D3382E0821C2602500AB146E /* iTunesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3382E0621C2602500AB146E /* iTunesController.swift */; };
+		D3382E0921C2602500AB146E /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3382E0721C2602500AB146E /* BaseTest.swift */; };
 		D3B3E3D221BB645500990112 /* iTunesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3E3D121BB645500990112 /* iTunesController.swift */; };
 		D3B3E3D421BB654400990112 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3E3D321BB654400990112 /* Router.swift */; };
 		D3D112B421B9E70400E36C66 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D112B321B9E70400E36C66 /* TableCell.swift */; };
@@ -61,6 +63,8 @@
 		D3322EFD21B43D8E005D0F1B /* Redux+Action+Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Redux+Action+Reducer.swift"; sourceTree = "<group>"; };
 		D3382DF821C22ECB00AB146E /* ReduxForSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxForSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3382DFC21C22ECB00AB146E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3382E0621C2602500AB146E /* iTunesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesController.swift; sourceTree = "<group>"; };
+		D3382E0721C2602500AB146E /* BaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		D3B3E3D121BB645500990112 /* iTunesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesController.swift; sourceTree = "<group>"; };
 		D3B3E3D321BB654400990112 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D3D112B321B9E70400E36C66 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				D3382DFC21C22ECB00AB146E /* Info.plist */,
+				D3382E0721C2602500AB146E /* BaseTest.swift */,
+				D3382E0621C2602500AB146E /* iTunesController.swift */,
 			);
 			path = ReduxForSwiftTests;
 			sourceTree = "<group>";
@@ -362,6 +368,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3382E0921C2602500AB146E /* BaseTest.swift in Sources */,
+				D3382E0821C2602500AB146E /* iTunesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
